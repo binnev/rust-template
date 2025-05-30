@@ -1,44 +1,23 @@
-/// A simple calculator library providing basic arithmetic operations.
+pub mod docs;
 
-/// Adds two numbers and returns the result.
-///
-/// # Examples
-///
-/// ```
-/// use rust_template::add;
-/// let result = add(2.0, 3.0);
-/// assert_eq!(result, 5.0);
-/// ```
+#[doc = include_str!("../docs/ref/add.md")]
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
 }
 
-/// Subtracts the second number from the first and returns the result.
-///
-/// # Examples
-///
-/// ```
-/// use rust_template::subtract;
-/// let result = subtract(5.0, 3.0);
-/// assert_eq!(result, 2.0);
-/// ```
+#[doc = include_str!("../docs/ref/subtract.md")]
 pub fn subtract(a: f64, b: f64) -> f64 {
     a - b
 }
 
-/// Multiplies two numbers and returns the result.
-///
-/// # Examples
-///
-/// ```
-/// use rust_template::multiply;
-/// let result = multiply(2.0, 3.0);
-/// assert_eq!(result, 6.0);
-/// ```
+#[doc = include_str!("../docs/ref/multiply.md")]
 pub fn multiply(a: f64, b: f64) -> f64 {
     a * b
 }
 
+/// You can also put your docstring inline, but then you can't show it in the
+/// mkdocs site. 
+///
 /// Divides the first number by the second and returns the result.
 ///
 /// # Panics
@@ -48,8 +27,7 @@ pub fn multiply(a: f64, b: f64) -> f64 {
 /// # Examples
 ///
 /// ```
-/// use rust_template::divide;
-/// let result = divide(6.0, 3.0);
+/// let result = rust_template::divide(6.0, 3.0);
 /// assert_eq!(result, 2.0);
 /// ```
 pub fn divide(a: f64, b: f64) -> f64 {
