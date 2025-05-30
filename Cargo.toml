@@ -2,6 +2,10 @@
 name = "rust-template"
 version = "0.1.0"
 edition = "2024"
+description = "A template for new Rust projects with up-to-date tooling"
 
 [dependencies]
 clap = { version = "4.5.38", features = ["derive"] }
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"

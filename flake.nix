@@ -3,16 +3,20 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-python.url = "github:cachix/nixpkgs-python";
   };
 
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-python,
   }: let
     # We use this to tell nix which system we are targeting. Otherwise it will
     # default to whatever system we are running, which reduces the
     # reproducibility somewhat
     system = "x86_64-linux";
+
+    pythonVersion = "3.13.3";
 
     # This is equivalent to `import nixpkgs { system = "x86_64-linux" }`. 
     pkgs = import nixpkgs {inherit system;};
@@ -28,15 +32,19 @@
     # — or Nix might default to your current system, which isn’t always what
     # you want in a flake.
 
+    myPython = nixpkgs-python.packages.${system}.${pythonVersion};
   in {
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
         rustup
         cargo-watch
-        pre-commit
-        commitizen
+        myPython
+        uv
       ];
       shellHook = ''
+        uv venv --quiet
+        source .venv/bin/activate 
+        uv pip install -r pyproject.toml --quiet
         pre-commit install > /dev/null
         echo "Welcome!"
       '';
