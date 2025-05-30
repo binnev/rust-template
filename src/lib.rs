@@ -1,5 +1,3 @@
-pub mod docs;
-
 #[doc = include_str!("../docs/ref/add.md")]
 pub fn add(a: f64, b: f64) -> f64 {
     a + b

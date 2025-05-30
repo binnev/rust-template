@@ -15,9 +15,11 @@ nav:
       - how-to/versioning.md
       - how-to/run-cli.md
   - Reference:
-      - add: ref/add.md
-      - subtract: ref/subtract.md
-      - multiply: ref/multiply.md
+      - Reference site: ref/index.md
+      - lib:
+          - add: ref/add.md
+          - subtract: ref/subtract.md
+          - multiply: ref/multiply.md
 
 watch:
   - docs
