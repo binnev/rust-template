@@ -14,7 +14,7 @@ pub fn multiply(a: f64, b: f64) -> f64 {
 }
 
 /// You can also put your docstring inline, but then you can't show it in the
-/// mkdocs site. 
+/// mkdocs site.
 ///
 /// Divides the first number by the second and returns the result.
 ///
