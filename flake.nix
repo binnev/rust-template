@@ -18,7 +18,7 @@
 
     pythonVersion = "3.13.3";
 
-    # This is equivalent to `import nixpkgs { system = "x86_64-linux" }`. 
+    # This is equivalent to `import nixpkgs { system = "x86_64-linux" }`.
     pkgs = import nixpkgs {inherit system;};
     # Nix supports cross-platform builds, and nixpkgs contains packages for many
     # systems. Examples include:
@@ -40,12 +40,14 @@
         cargo-watch
         myPython
         uv
+        git-cliff # changelog generator
+        mask # markdown-based replacement for make
       ];
       shellHook = ''
         uv venv --quiet
-        source .venv/bin/activate 
+        source .venv/bin/activate
         uv pip install -r pyproject.toml --quiet
-        pre-commit install > /dev/null
+        pre-commit install -f --hook-type pre-commit --hook-type commit-msg --hook-type pre-push > /dev/null
         echo "Welcome!"
       '';
     };
