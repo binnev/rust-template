@@ -137,7 +137,7 @@ You can highlight lines too with `hl_lines="3-5"`
 /// # Examples
 ///
 /// ```
-/// let result = rust_template::divide(6.0, 3.0);
+/// let result = binnev_rust_template::divide(6.0, 3.0);
 /// assert_eq!(result, 2.0);
 /// ```
 pub fn divide(a: f64, b: f64) -> f64 {

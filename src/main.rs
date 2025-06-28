@@ -1,5 +1,5 @@
+use binnev_rust_template::{add, divide, multiply, subtract};
 use clap::{Args, Parser, Subcommand};
-use rust_template::{add, divide, multiply, subtract};
 
 fn main() {
     let cli = Cli::parse();
