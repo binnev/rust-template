@@ -1,8 +1,11 @@
 [package]
-name = "rust-template"
+name = "binnev-rust-template"
 version = "0.1.0"
 edition = "2024"
 description = "A template for new Rust projects with up-to-date tooling"
+repository = "https://github.com/binnev/rust-template/"
+readme = "README.md"
+license = "MIT"
 
 [dependencies]
 clap = { version = "4.5.38", features = ["derive"] }
