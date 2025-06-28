@@ -49,19 +49,14 @@ git-cliff -o CHANGELOG.md --bump \
 
 ```sh 
 mask release cleanup
-python -m build \
-&& twine check dist/* \
-&& twine upload --repository testpypi dist/* --verbose \
-&& mask ask "Does the TestPyPI release look ok?" \
-&& twine upload --repository pypi dist/* --verbose
-mask release cleanup
+cargo publish
 ```
 
 ### cleanup 
 > Clean up build artifacts
 
 ```sh
-rm -rf dist/
+rm -rf target/
 ```
 
 ## ask (prompt)
