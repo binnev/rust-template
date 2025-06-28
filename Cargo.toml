@@ -6,7 +6,7 @@ description = "A template for new Rust projects with up-to-date tooling"
 repository = "https://github.com/binnev/rust-template/"
 readme = "README.md"
 license = "MIT"
-include = ["**/*.rs"]
+include = ["**/*.rs", "docs/*"]
 
 [dependencies]
 clap = { version = "4.5.38", features = ["derive"] }
