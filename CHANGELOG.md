@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2025-07-11
+
+### 🐛 Bug Fixes
+
+- *(build)* Make it so that docs bump only takes major.minor version
+
+
+### 📚 Documentation
+
+- Switch readme position
+
+
+- Update docs.rs link
+
+
 ## [0.1.1] - 2025-06-28
 
 ### 🐛 Bug Fixes

@@ -1,6 +1,6 @@
 [package]
 name = "binnev-rust-template"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "A template for new Rust projects with up-to-date tooling"
 repository = "https://github.com/binnev/rust-template/"
